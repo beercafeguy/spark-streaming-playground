@@ -9,7 +9,7 @@ object LongestTweetInBatch {
 
   def main(args: Array[String]): Unit = {
     setupTwitter()
-    val ssc=new StreamingContext("local[*]","AvgTweetLength",Seconds(1))
+    val ssc=new StreamingContext("local[*]","LongestTweet",Seconds(1))
 
     setupLogging()
     val tweets=TwitterUtils.createStream(ssc,None)
