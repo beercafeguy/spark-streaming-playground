@@ -6,6 +6,13 @@ import com.beercafeguy.spark.streaming.twitter.TwitterSetupUtils.{setupLogging, 
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.twitter.TwitterUtils
 
+/*
+Create Table script:
+create table retail_db.tweets(
+ text VARCHAR(2000),
+ createdon VARCHAR(30)
+);
+ */
 object SaveTweetsToDB {
 
   def main(args: Array[String]): Unit = {
